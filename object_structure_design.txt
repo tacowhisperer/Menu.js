@@ -1,0 +1,69 @@
+Menu.js Construction Object:
+    - "**" = entry in Object is optional
+    - "foobar0", "foobar1", etc. = property can be any valid JSON string
+    - "..." = this property's values have already been explained in context
+
+    - ".
+       .  = and so on
+       ."
+
+    - ".
+        .   = this property has the same structure as the parent property, and can be nested arbitrarily deep
+         ."
+
+{
+    ** header: {
+        icons: [
+            ** {
+                iconImage: SVG || url/path || "$" + iconText,
+                ** mousedown: function (..customArgumentsFromArgumentsArray, eventObject) {...},
+                ** mousedownArguments: Array,
+                ** mouseup: function (...customArgumentsFromArgumentsArray, eventObject) {...},
+                ** mouseupArguments: Array,
+                ** iconFont: "$" + CSS Color String || url/path,
+                ** iconTextColor: CSS Color String,
+                ** iconHighlightImage: SVG || url/path,
+                ** hoverText: string
+            },
+
+            ** {...},
+            .
+            .
+            .
+        ]
+    },
+
+    ** body: [
+        ** {
+            ** body: [
+                .
+                 .
+                  .
+            ]
+        },
+
+        ** {...},
+        .
+        .
+        .
+    ],
+
+    footer: [
+        icon0: {
+
+        },
+
+        icon1: {...},
+        .
+        .
+        .
+    ],
+
+    ** style: {
+
+    },
+
+    ** options: {
+
+    }
+}
