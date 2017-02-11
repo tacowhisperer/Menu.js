@@ -15,15 +15,24 @@ Menu.js Construction Object:
     ** header: {
         icons: [
             ** {
-                iconImage: SVG || url/path || "$" + iconText,
-                ** mousedown: function (..customArgumentsFromArgumentsArray, eventObject) {...},
-                ** mousedownArguments: Array,
-                ** mouseup: function (...customArgumentsFromArgumentsArray, eventObject) {...},
-                ** mouseupArguments: Array,
+                iconDisplay: SVG || url/path || "$" + iconText,
                 ** iconFont: "$" + CSS Color String || url/path,
                 ** iconTextColor: CSS Color String,
-                ** iconHighlightImage: SVG || url/path,
                 ** hoverText: string
+                ** width: CSS Value
+                ** height: CSS Value
+                ** left || right: CSS Value
+                ** events: {
+                    ** validEventFoundOnMDNOrW3Schools0: {
+                        ** args: Array,
+                        handler: function (...customArgumentsFromArgumentsArray, animator, thisElement, eventObject) {...}
+                    },
+
+                    ** validEventFoundOnMDNOrW3Schools1: {...},
+                    .
+                    .
+                    .
+                }
             },
 
             ** {...},
@@ -35,7 +44,21 @@ Menu.js Construction Object:
 
     ** body: [
         ** {
+            ** events: {
+                ** validEventFoundOnMDNOrW3Schools0: {
+                    ** args: Array,
+                    handler: function (...customArgumentsFromArgumentsArray, animator, thisElement, eventObject) {...}
+                },
+
+                ** validEventFoundOnMDNOrW3Schools1: {...},
+                .
+                .
+                .
+            }
+
             ** body: [
+                ** useTick: true || false,
+                ** tickIcon: SVG || url/path
                 .
                  .
                   .
