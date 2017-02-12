@@ -15,20 +15,29 @@ Menu.js Construction Object:
     ** header: {
         icons: [
             ** {
-                iconDisplay: SVG || url/path || "$" + iconText,
+                iconDisplay: SVG Element Object || url/path || "$" + iconText,
+
                 ** iconFont: "$" + CSS Color String || url/path,
+
                 ** iconTextColor: CSS Color String,
+
                 ** hoverText: string
+
                 ** width: CSS Value
+
                 ** height: CSS Value
+
                 ** left || right: CSS Value
+
+                ** backgroundColor: CSS Value
+
                 ** events: {
-                    ** validEventFoundOnMDNOrW3Schools0: {
+                    ** validJSEventFoundOnMDNOrW3Schools0: {
                         ** args: Array,
-                        handler: function (...customArgumentsFromArgumentsArray, animator, thisElement, eventObject) {...}
+                        handler: function (...customArgumentsFromArgumentsArray, animator, thisIconElement, eventObject) {...}
                     },
 
-                    ** validEventFoundOnMDNOrW3Schools1: {...},
+                    ** validJSEventFoundOnMDNOrW3Schools1: {...},
                     .
                     .
                     .
@@ -39,26 +48,43 @@ Menu.js Construction Object:
             .
             .
             .
-        ]
+        ],
+
+        ** height: CSS Value
+
+        ** backgroundColor: CSS Value
+
+        ** events: {
+            ** validJSEventFoundOnMDNOrW3Schools0: {
+                ** args: Array,
+                handler: function (...customArgumentsFromArgumentsArray, animator, thisHeaderElement, eventObject) {...}
+            },
+
+            ** validJSEventFoundOnMDNOrW3Schools1: {...},
+            .
+            .
+            .
+        }
     },
 
     ** body: [
         ** {
             ** events: {
-                ** validEventFoundOnMDNOrW3Schools0: {
+                ** validJSEventFoundOnMDNOrW3Schools0: {
                     ** args: Array,
                     handler: function (...customArgumentsFromArgumentsArray, animator, thisElement, eventObject) {...}
                 },
 
-                ** validEventFoundOnMDNOrW3Schools1: {...},
+                ** validJSEventFoundOnMDNOrW3Schools1: {...},
                 .
                 .
                 .
             }
 
             ** body: [
-                ** useTick: true || false,
-                ** tickIcon: SVG || url/path
+                ** useTick: true || false
+
+                ** tickIcon: SVG Element Object || url/path
                 .
                  .
                   .
@@ -87,6 +113,12 @@ Menu.js Construction Object:
     },
 
     ** options: {
+        ** hideOnOutsideScroll: true || false
 
+        ** hideOnOutsideClick: true || false
+
+        ** hideAnimation: [PREDEFINED_ANIMATION_NAME_TO_HIDE_MENU, numFrames]
+
+        ** revealAnimation: [PREDEFINED_ANIMATION_NAME_TO_REVEAL_MENU, numFrames]
     }
 }
